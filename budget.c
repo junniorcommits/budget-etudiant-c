@@ -16,7 +16,14 @@ int main(void)
 
     while (depense != 0)
     {
-        total_depense += depense;
+        if (depense > 0)
+        {
+            total_depense += depense;
+        }
+        else
+        {
+            printf("Erreur: la depense doit etre positive\n");
+        }
         printf("Depense: ");
         scanf("%i", &depense);
     }
