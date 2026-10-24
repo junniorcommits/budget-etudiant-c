@@ -11,9 +11,15 @@ int main(void)
     printf("Budget: ");
     scanf("%i", &budget);
 
+    while (budget <= 0)
+    {
+        printf("Erreur: le budget doit etre strictement positif\n");
+        printf("Budget: ");
+        scanf("%i", &budget);
+    }
+
     printf("Depense: ");
     scanf("%i", &depense);
-
     while (depense != 0)
     {
         if (depense > 0)
@@ -27,12 +33,11 @@ int main(void)
         printf("Depense: ");
         scanf("%i", &depense);
     }
-      
+
     solde_restant = budget - total_depense;
     
     // Afficher les dépenses totales et le solde restant
     printf("Depense totale: %i\nSolde restant: %i", total_depense, solde_restant);
 
     return 0;
-
 }
